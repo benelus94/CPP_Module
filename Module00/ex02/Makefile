@@ -22,7 +22,7 @@ $(OBJS_DIR)%.o : %.cpp
 	$(CC) $(CFLAGS) -c $(INCS) $< -o $@
 
 clean :
-	rm -f $(OJBS)
+	rm -f $(OBJS)
 
 fclean : clean
 	rm -f $(NAME)

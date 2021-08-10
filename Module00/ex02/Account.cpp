@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 16:56:51 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/07/15 17:20:55 by yongwkim         ###   ########.fr       */
+/*   Updated: 2021/08/03 17:39:52 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,11 +145,11 @@ void	Account::_displayTimestamp( void )
 	time_t time = std::chrono::system_clock::to_time_t(tp);
 	tm *tm_local = localtime(&time);
 
-	std::cout << "[" << tm_local->tm_year + 1900
-					 << tm_local->tm_mon
-					 << tm_local->tm_mday << "_"
-					 << tm_local->tm_hour
-					 << tm_local->tm_min
-					 << tm_local->tm_sec << "] ";
+	std::cout << "[" << tm_local->tm_year + 1900;
+	std::cout << std::setfill('0') << std::setw(2) << tm_local->tm_mon;
+	std::cout << std::setfill('0') << std::setw(2) << tm_local->tm_mday << "_";
+	std::cout << std::setfill('0') << std::setw(2) << tm_local->tm_hour;
+	std::cout << std::setfill('0') << std::setw(2) << tm_local->tm_min;
+	std::cout << std::setfill('0') << std::setw(2) << tm_local->tm_sec << "] ";
 }
 
