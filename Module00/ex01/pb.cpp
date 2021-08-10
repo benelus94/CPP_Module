@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/13 16:58:37 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/08/10 14:30:37 by yongwkim         ###   ########.fr       */
+/*   Updated: 2021/08/10 16:25:41 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,8 @@ void pb::add(void)
 
 void pb::search(void)
 {
-	int	idx;
+	std::string idxstr;
+	int	idxint;
 
 	std::cout << " ------------------------------------------- " << std::endl;
 	std::cout << "|     index|first name| last name|  nickname|" << std::endl;
@@ -50,6 +51,10 @@ void pb::search(void)
 	}
 	std::cout << " ------------------------------------------- " << std::endl;
 	std::cout << "Enter index number to see more information : ";
-	std::cin >> idx;
-	contacts[idx].show_contact_info(idx);
+	std::getline(std::cin, idxstr);
+	if (idxstr != "")
+	{
+		idxint = std::stoi(idxstr);
+		contacts[idxint].show_contact_info(idxint);
+	}
 }
