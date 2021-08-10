@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   class_contact.cpp                                  :+:      :+:    :+:   */
+/*   contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/13 17:15:12 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/07/14 16:49:00 by yongwkim         ###   ########.fr       */
+/*   Updated: 2021/08/10 14:30:18 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "class_contact.hpp"
+#include "contact.hpp"
 
 void contact::replace(std::string _first_name, std::string _last_name,
 					std::string _nickname, std::string _phone_number,

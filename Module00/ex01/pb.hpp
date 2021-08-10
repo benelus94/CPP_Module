@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   class_pb.hpp                                       :+:      :+:    :+:   */
+/*   pb.hpp                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/13 17:04:51 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/07/13 17:43:13 by yongwkim         ###   ########.fr       */
+/*   Updated: 2021/08/10 14:30:46 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLASS_PB_HPP
-# define CLASS_PB_HPP
+#ifndef PB_HPP
+# define PB_HPP
 
 #include <iostream>
 #include <string>
-#include "class_contact.hpp"
+#include "contact.hpp"
 
 class pb
 {
