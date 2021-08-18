@@ -3,11 +3,11 @@ CFLAGS = -Wall -Wextra -Werror
 LFLAGS = -L.
 INCS = -I includes
 
-NAME = ex03
+NAME = karenFilter
 
 OBJS_DIR = objs/
 
-SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+SRCS = main.cpp Karen.cpp
 OBJS = $(addprefix $(OBJS_DIR),$(SRCS:.cpp=.o))
 
 all : $(NAME) 
