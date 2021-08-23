@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/13 16:58:37 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/08/10 16:25:41 by yongwkim         ###   ########.fr       */
+/*   Updated: 2021/08/23 15:50:37 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void pb::add(void)
 	contacts[add_idx++].replace(first_name, last_name, nickname, phone_number, darkest_secret);
 	if (add_idx == 8)
 		add_idx = 0;
-	else
+	if (n_contacts < 8)
 		n_contacts++;
 }
 
@@ -54,6 +54,9 @@ void pb::search(void)
 	std::getline(std::cin, idxstr);
 	if (idxstr != "")
 	{
+		for (int i = 0; i < (int)idxstr.length(); i++)
+			if (!isdigit(idxstr[i]))
+				return ;
 		idxint = std::stoi(idxstr);
 		contacts[idxint].show_contact_info(idxint);
 	}
