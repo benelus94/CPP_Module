@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/10 16:57:16 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/08/11 17:21:10 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/18 17:20:43 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,10 @@
 
 class cfile
 {
-	std::ifstream filein;
-	std::ofstream fileout;
+	private:
+		std::ifstream filein;
+		std::ofstream fileout;
+	
 	public:
 		bool open(std::string filename);
 		void close();

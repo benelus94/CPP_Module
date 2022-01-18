@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/29 16:16:49 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/07/29 16:35:34 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/17 17:18:09 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,4 @@ int	main(void)
 	std::cout << "address of stringREF : " << &stringREF << std::endl;
 	std::cout << "string with pointer : " << *stringPTR << std::endl;
 	std::cout << "string with reference : " << stringREF << std::endl;
-
 }

@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 15:18:04 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/07/29 13:59:30 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/17 16:49:54 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@
 
 class Zombie
 {
-	std::string	name;
+	private:
+		std::string	name;
 
 	public:
 		Zombie(std::string name);

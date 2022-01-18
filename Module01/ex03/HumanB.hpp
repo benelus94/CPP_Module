@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/30 13:51:25 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/07/30 16:03:27 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/17 17:49:28 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,13 @@
 
 class HumanB
 {
-	Weapon		*weapon;
-	std::string	name;
+	private:
+		const std::string	name;
+		const Weapon		*weapon;
 
 	public:
-		HumanB(std::string _name);
-		void	setWeapon(Weapon &_weapon);
+		HumanB(const std::string name);
+		void	setWeapon(const Weapon &weapon);
 		void	attack();
 };
 

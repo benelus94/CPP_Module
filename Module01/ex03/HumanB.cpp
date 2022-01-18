@@ -6,13 +6,13 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/30 13:27:23 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/07/30 16:13:56 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/17 17:54:34 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string _name): name(_name), weapon(nullptr)
+HumanB::HumanB(const std::string name): name(name), weapon(nullptr)
 {
 }
 
@@ -24,7 +24,7 @@ void	HumanB::attack()
 		std::cout << name << " can't attack without weapon (need setWeapon)" << std::endl;
 }
 
-void HumanB::setWeapon(Weapon &_weapon)
+void HumanB::setWeapon(const Weapon &weapon)
 {
-	weapon = &_weapon;
+	this->weapon = &weapon;
 }

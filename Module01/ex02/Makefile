@@ -1,5 +1,5 @@
-CC = CLANG++
-CFLAGS = -Wall -Wextra -Werror
+CC = c++
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 LFLAGS = -L.
 INCS = -I includes
 

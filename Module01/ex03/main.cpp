@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/30 13:35:13 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/07/30 16:14:10 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/17 17:42:59 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 int	main(void)
 {
+
 	Weapon w1("machinegun");
 	HumanA a("Kim", w1);
 	HumanB b("Yong");
@@ -28,4 +29,19 @@ int	main(void)
 	b.setWeapon(w1);
 	b.attack();
 	b2.attack();
+	{
+		Weapon club = Weapon("crude spiked club");
+		HumanA bob("Bob", club);
+		bob.attack();
+		club.setType("some other type of club");
+		bob.attack();
+	}
+	{
+		Weapon club = Weapon("crude spiked club");
+		HumanB jim("Jim");
+		jim.setWeapon(club);
+		jim.attack();
+		club.setType("some other type of club");
+		jim.attack();
+	}
 }

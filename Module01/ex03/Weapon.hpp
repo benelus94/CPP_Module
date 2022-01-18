@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/30 13:27:32 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/07/30 16:06:37 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/17 17:19:34 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 
 class Weapon
 {
-	std::string type;
+	private:
+		std::string type;
 
 	public:
 		Weapon(std::string _type);
