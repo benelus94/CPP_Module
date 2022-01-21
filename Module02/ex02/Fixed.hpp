@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 16:07:01 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/08/23 17:27:15 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/21 15:37:55 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,20 +29,20 @@ class Fixed
 		Fixed(const float _fpv);
 		~Fixed(void);
 		Fixed&	operator=(const Fixed &orth);
-		bool	operator>(const Fixed &orth);
-		bool	operator<(const Fixed &orth);
-		bool	operator>=(const Fixed &orth);
-		bool	operator<=(const Fixed &orth);
-		bool	operator==(const Fixed &orth);
-		bool	operator!=(const Fixed &orth);
+		bool	operator>(const Fixed &orth) const;
+		bool	operator<(const Fixed &orth) const;
+		bool	operator>=(const Fixed &orth) const;
+		bool	operator<=(const Fixed &orth) const;
+		bool	operator==(const Fixed &orth) const;
+		bool	operator!=(const Fixed &orth) const;
 		Fixed	operator+(const Fixed &orth);
 		Fixed	operator-(const Fixed &orth);
 		Fixed	operator*(const Fixed &orth);
 		Fixed	operator/(const Fixed &orth);
-		Fixed	&operator++();
-		Fixed	operator++(int);
-		Fixed	&operator--();
-		Fixed	operator--(int);
+		Fixed	&operator++();		// prefix increment
+		Fixed	operator++(int);	// postfix increment
+		Fixed	&operator--();		// prefix decrement
+		Fixed	operator--(int);	// postfix decrement
 
 		int		getRawBits(void) const;
 		void	setRawBits(int const raw);

@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 15:35:45 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/08/20 16:21:45 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/19 15:31:41 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ Fixed::Fixed(const int _fpv)
 Fixed::Fixed(const float _fpv)
 {
 	std::cout << "Float constructor called" << std::endl;
-	fpv = roundf(_fpv * (1 << Fixed::n_frac_bits));
+	fpv = roundf(_fpv * (1 << n_frac_bits));
 }
 
 Fixed& Fixed::operator=(const Fixed &orth)
@@ -68,12 +68,12 @@ void Fixed::setRawBits(int raw)
 
 float	Fixed::toFloat(void) const
 {
-	return ((float)fpv / (float)(1 << Fixed::n_frac_bits));
+	return ((float)fpv / (float)(1 << n_frac_bits));
 }
 
 int		Fixed::toInt(void) const
 {
-	return (fpv >> Fixed::n_frac_bits);
+	return (fpv >> n_frac_bits);
 }
 
 

@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 15:35:45 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/08/26 16:51:30 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/21 15:37:53 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,33 +48,33 @@ Fixed& Fixed::operator=(const Fixed &orth)
 	return (*this);
 }
 
-bool Fixed::operator>(const Fixed &orth)
+bool Fixed::operator>(const Fixed &orth) const
 {
 	return (fpv > orth.getRawBits());
 }
 
-bool Fixed::operator<(const Fixed &orth)
+bool Fixed::operator<(const Fixed &orth) const
 {
 	return (fpv < orth.getRawBits());
 
 }
 
-bool Fixed::operator>=(const Fixed &orth)
+bool Fixed::operator>=(const Fixed &orth) const
 {
 	return (fpv >= orth.getRawBits());
 }
 
-bool Fixed::operator<=(const Fixed &orth)
+bool Fixed::operator<=(const Fixed &orth) const
 {
 	return (fpv <= orth.getRawBits());
 }
 
-bool Fixed::operator==(const Fixed &orth)
+bool Fixed::operator==(const Fixed &orth) const
 {
 	return (fpv == orth.getRawBits());
 }
 
-bool Fixed::operator!=(const Fixed &orth)
+bool Fixed::operator!=(const Fixed &orth) const
 {
 	return (fpv != orth.getRawBits());
 }
@@ -160,27 +160,27 @@ int		Fixed::toInt(void) const
 
 Fixed	&Fixed::min(Fixed &orth1, Fixed &orth2)
 {
-	if (orth1.getRawBits() > orth2.getRawBits())
+	if (orth1 > orth2)
 		return (orth2);
 	return (orth1);
 }
 
 Fixed const	&min(const Fixed &orth1, const Fixed &orth2)
 {
-	if (orth1.getRawBits() > orth2.getRawBits())
+	if (orth1 > orth2)
 		return (orth2);
 	return (orth1);
 }
 
 Fixed	&Fixed::max(Fixed &orth1, Fixed &orth2)
 {
-	if (orth1.getRawBits() > orth2.getRawBits())
+	if (orth1 > orth2)
 		return (orth1);
 	return (orth2);
 }
 Fixed const	&Fixed::max(const Fixed &orth1, const Fixed &orth2)
 {
-	if (orth1.getRawBits() > orth2.getRawBits())
+	if (orth1 > orth2)
 		return (orth1);
 	return (orth2);
 }

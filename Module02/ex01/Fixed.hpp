@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 16:07:01 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/08/20 16:31:41 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/18 17:36:00 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class Fixed
 	private:
 		int	fpv;
 		static const int n_frac_bits = 8;
+
 	public:
 		Fixed(void);
 		Fixed(const Fixed &orth);
