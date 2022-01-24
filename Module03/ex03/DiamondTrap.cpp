@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 16:59:21 by yongwkim          #+#    #+#             */
-/*   Updated: 2022/01/24 16:36:53 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/24 17:18:11 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,8 @@ DiamondTrap::~DiamondTrap()
 
 DiamondTrap &DiamondTrap::operator=(DiamondTrap const &dt)
 {
-	//ScavTrap::operator=(dt);
-	//FragTrap::operator=(dt);
+	ScavTrap::operator=(dt);
+	FragTrap::operator=(dt);
 	Name = dt.Name;
 	HitPoint = FragTrap::HitPoint;
 	EnergyPoint = ScavTrap::EnergyPoint;

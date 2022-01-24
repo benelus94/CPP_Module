@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 15:33:58 by yongwkim          #+#    #+#             */
-/*   Updated: 2022/01/24 15:21:55 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/24 17:18:06 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ int	main()
 	std::cout << "What's your DiamondTrap's name? : ";
 	std::cin >> name;
 
-	//DiamondTrap dt_prev(name);
+	DiamondTrap dt_prev(name);
 	DiamondTrap	dt(name);
-	//dt = dt_prev;
+	dt = dt_prev;
 	std::cout << "What's your enemy's name? : ";
 	std::cin >> enemy;
 	while(1)
