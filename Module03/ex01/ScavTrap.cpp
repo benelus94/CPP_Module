@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 16:27:27 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/10/07 17:25:55 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/24 15:01:16 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,22 @@ ScavTrap::~ScavTrap()
 	std::cout << "Scavtrap " << Name << " died." << std::endl;
 }
 
+ScavTrap &ScavTrap::operator=(ScavTrap const &st)
+{
+	ClapTrap::operator=(st);
+	return (*this);
+}
+
 void	ScavTrap::attack(std::string const &target)
 {
-	std::cout << "ScavTrap " << Name << " attacks " << target << " causing " << AttackDamage << " points of damage!" << std::endl;
+	if (EnergyPoint == 0)
+		std::cout << "ScavTrap : Not enugh EP" << std::endl;
+	else
+	{
+		EnergyPoint--;
+		std::cout << "ScavTrap " << Name << " attacks " << target << " causing " << AttackDamage << " points of damage!";
+		std::cout << "(EP: " << EnergyPoint << ")" << std::endl;
+	}
 }
 
 void	ScavTrap::guardGate()

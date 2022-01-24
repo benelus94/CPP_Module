@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 16:59:21 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/10/12 16:59:46 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/24 16:36:53 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 DiamondTrap::DiamondTrap(): ClapTrap(), ScavTrap(), FragTrap()
 {
+	Name = "Default";
 	HitPoint = FragTrap::HitPoint;
 	EnergyPoint = ScavTrap::EnergyPoint;
 	AttackDamage = FragTrap::AttackDamage;
@@ -24,12 +25,11 @@ DiamondTrap::DiamondTrap(): ClapTrap(), ScavTrap(), FragTrap()
 
 DiamondTrap::DiamondTrap(std::string _Name): ClapTrap(_Name + "_clap_name"), ScavTrap(_Name + "_clap_name"), FragTrap(_Name + "_clap_name")
 {
-	std::cout << "constructor claptap " << ClapTrap::Name << std::endl;
 	this->Name = _Name;
 	HitPoint = FragTrap::HitPoint;
 	EnergyPoint = ScavTrap::EnergyPoint;
 	AttackDamage = FragTrap::AttackDamage;
-	MaxHP = FragTrap::HitPoint;;
+	MaxHP = FragTrap::HitPoint;
 	MaxEP = ScavTrap::EnergyPoint;
 	std::cout << "DiamondTrap " << Name << " ready." << std::endl;
 }
@@ -52,12 +52,14 @@ DiamondTrap::~DiamondTrap()
 
 DiamondTrap &DiamondTrap::operator=(DiamondTrap const &dt)
 {
+	//ScavTrap::operator=(dt);
+	//FragTrap::operator=(dt);
 	Name = dt.Name;
-	HitPoint = dt.HitPoint;
-	EnergyPoint = dt.EnergyPoint;
-	AttackDamage = dt.AttackDamage;
-	MaxHP = dt.MaxHP;
-	MaxEP = dt.MaxEP;
+	HitPoint = FragTrap::HitPoint;
+	EnergyPoint = ScavTrap::EnergyPoint;
+	AttackDamage = FragTrap::AttackDamage;
+	MaxHP = FragTrap::HitPoint;;
+	MaxEP = ScavTrap::EnergyPoint;
 	return (*this);
 }
 

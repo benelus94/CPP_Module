@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 15:33:58 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/10/07 15:35:37 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/24 14:48:08 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ int	main()
 	std::cout << "What's your ScavTrap's name? : ";
 	std::cin >> name;
 
-	ScavTrap	st(name);
+	ScavTrap	st_prev(name);
+	ScavTrap	st;
+	st = st_prev;
 	std::cout << "What's your enemy's name? : ";
 	std::cin >> enemy;
 	while(1)

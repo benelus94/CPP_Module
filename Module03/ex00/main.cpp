@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 15:33:58 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/10/07 15:36:11 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/24 14:43:16 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ int	main()
 	std::cout << "What's your ClapTrap's name? : ";
 	std::cin >> name;
 
-	ClapTrap	ct(name);
+	ClapTrap	ct_prev(name);
+	ClapTrap	ct;
+	ct = ct_prev;
 	std::cout << "What's your enemy's name? : ";
 	std::cin >> enemy;
 	while(1)

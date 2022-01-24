@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 15:33:58 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/10/07 16:58:23 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/24 14:44:10 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ int	main()
 	std::cout << "What's your FragTrap's name? : ";
 	std::cin >> name;
 
-	FragTrap	ft(name);
+	FragTrap	ft_prev(name);
+	FragTrap	ft;
+	ft = ft_prev;
 	std::cout << "What's your enemy's name? : ";
 	std::cin >> enemy;
 	while(1)

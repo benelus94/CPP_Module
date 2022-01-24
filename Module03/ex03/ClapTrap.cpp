@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 16:09:52 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/10/12 16:48:45 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/24 14:57:34 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,14 @@ ClapTrap &ClapTrap::operator=(ClapTrap const &ct)
 
 void	ClapTrap::attack(std::string const &target)
 {
-	std::cout << "ClapTrap " << Name << " attacks " << target << " causing " << AttackDamage << " points of damage!" << std::endl;
+	if (EnergyPoint == 0)
+		std::cout << "ClapTrap : Not enugh EP" << std::endl;
+	else
+	{
+		EnergyPoint--;
+		std::cout << "ClapTrap " << Name << " attacks " << target << " causing " << AttackDamage << " points of damage!";
+		std::cout << "(EP: " << EnergyPoint << ")" << std::endl;
+	}
 }
 
 void	ClapTrap::takeDamage(unsigned int amount)

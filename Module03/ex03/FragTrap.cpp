@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 15:32:53 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/10/12 16:50:52 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/24 15:09:09 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,10 @@ FragTrap::FragTrap(std::string _Name): ClapTrap(_Name)
 FragTrap::FragTrap(FragTrap const &st): ClapTrap(st.Name)
 {
 	HitPoint = 100;
-	EnergyPoint = 50;
-	AttackDamage = 20;
+	EnergyPoint = 100;
+	AttackDamage = 30;
 	MaxHP = 100;
-	MaxEP = 50;
+	MaxEP = 100;
 	std::cout << "FragTrap " << Name << " ready." << std::endl;
 }
 
@@ -49,12 +49,7 @@ FragTrap::~FragTrap()
 
 FragTrap &FragTrap::operator=(FragTrap const &ft)
 {
-	Name = ft.Name;
-	HitPoint = ft.HitPoint;
-	EnergyPoint = ft.EnergyPoint;
-	AttackDamage = ft.AttackDamage;
-	MaxHP = ft.MaxHP;
-	MaxEP = ft.MaxEP;
+	ClapTrap::operator=(ft);
 	return (*this);
 }
 
