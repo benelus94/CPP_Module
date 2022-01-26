@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 17:35:32 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/10/27 16:24:03 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/26 15:17:05 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class Character : public ICharacter
 		std::string	name;
 		AMateria*	inven[4];
 	public:
+		Character();
 		Character(std::string name);
 		Character(Character const &ch);
 		~Character();

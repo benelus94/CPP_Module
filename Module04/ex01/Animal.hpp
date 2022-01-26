@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 15:26:59 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/10/15 16:42:23 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/24 17:57:48 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class Animal
 
 		virtual std::string	getType() const;
 		virtual void		makeSound() const;
+		virtual void		print_brain_addr() const;
 };
 
 #endif

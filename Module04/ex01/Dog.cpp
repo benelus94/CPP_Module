@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 16:50:23 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/10/20 16:06:14 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/24 17:57:09 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,9 @@ std::string Dog::getType() const
 void Dog::makeSound() const
 {
 	std::cout << "bark! bark!" << std::endl;
+}
+
+void	Dog::print_brain_addr() const
+{
+	std::cout << "brain address = " << &brain << std::endl;
 }

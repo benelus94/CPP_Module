@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 16:48:13 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/10/15 16:26:55 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/24 17:55:53 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class Cat: public Animal
 		Cat &operator=(Cat const &Cat);
 		std::string	getType() const;
 		void	makeSound() const;
+		void	print_brain_addr() const;
 };
 
 #endif

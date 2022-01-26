@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 16:42:40 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/10/14 18:48:38 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/26 14:56:45 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,9 @@ std::string	Animal::getType() const
 void	Animal::makeSound() const
 {
 	std::cout << "Can't make sound." << std::endl;
+}
+
+void	Animal::print_brain_addr() const
+{
+	std::cout << "Not every animal got a brain." << std::endl;
 }

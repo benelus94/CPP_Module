@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 17:25:52 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/10/27 16:39:05 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/26 15:22:25 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ class Ice : public AMateria
 	public:
 		Ice();
 		Ice(AMateria const &ice);
+		~Ice();
+		Ice &operator=(Ice const &ice);
 		AMateria*	clone() const;
 		void		use(ICharacter& target);	
 };

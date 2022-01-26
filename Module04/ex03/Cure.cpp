@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 16:21:07 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/10/27 16:44:05 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/26 15:22:07 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,16 @@ Cure::Cure() : AMateria("cure")
 
 Cure::Cure(AMateria const &cure) : AMateria(cure.getType())
 {
+}
+
+Cure::~Cure()
+{
+}
+
+Cure &Cure::operator=(Cure const &cure)
+{
+	type = cure.getType();
+	return (*this);
 }
 
 AMateria*	Cure::clone() const

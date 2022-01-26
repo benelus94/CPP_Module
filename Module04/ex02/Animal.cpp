@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 16:42:40 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/10/18 16:54:53 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/26 15:01:40 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,4 @@ Animal &Animal::operator=(const Animal &a)
 std::string	Animal::getType() const
 {
 	return (type);
-}
-
-void	Animal::makeSound() const
-{
-	std::cout << "Can't make sound." << std::endl;
 }

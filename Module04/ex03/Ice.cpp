@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 17:27:53 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/10/27 16:44:00 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/26 15:23:09 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,16 @@ Ice::Ice() : AMateria("ice")
 
 Ice::Ice(AMateria const &ice) : AMateria(ice.getType())
 {
+}
+
+Ice::~Ice()
+{
+}
+
+Ice &Ice::operator=(Ice const &ice)
+{
+	type = ice.getType();
+	return (*this);
 }
 
 AMateria*	Ice::clone() const

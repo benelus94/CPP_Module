@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 16:36:00 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/10/15 16:27:21 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/24 17:55:59 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class Dog : public Animal
 		Dog &operator=(Dog const &dog);
 		std::string	getType() const;
 		void	makeSound() const;
+		void	print_brain_addr() const;
 };
 
 #endif

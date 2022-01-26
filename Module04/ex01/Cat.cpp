@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 16:54:36 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/10/20 16:05:34 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/24 17:56:59 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,9 @@ std::string Cat::getType() const
 void Cat::makeSound() const
 {
 	std::cout << "meow~ meow~" << std::endl;
+}
+
+void	Cat::print_brain_addr() const
+{
+	std::cout << "brain address = " << &brain << std::endl;
 }
