@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 16:06:35 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/11/10 17:39:31 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/27 14:21:09 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,6 @@ void		Bureaucrat::gradeUp()
 	else
 		grade -= 1;
 	std::cout << *this << std::endl;
-	//std::cout << name << "'s grade is upgraded from " << grade + 1 << " to " << grade;
 }
 
 void		Bureaucrat::gradeDown()
@@ -108,7 +107,6 @@ void		Bureaucrat::gradeDown()
 	else
 		grade += 1;
 	std::cout << *this << std::endl;
-	//std::cout << name << "'s grade is downgraded from " << grade - 1 << " to " << grade;
 }
 
 /* sign Form */

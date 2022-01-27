@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 18:02:43 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/11/09 16:54:30 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/27 18:55:58 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,6 @@ class Form
 		void		beSigned(Bureaucrat const &bur);
 };
 
-std::ostream	&operator<<(std::ostream &os, Form &form);
+std::ostream	&operator<<(std::ostream &os, const Form &form);
 
 #endif

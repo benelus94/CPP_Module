@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 15:12:25 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/11/11 16:44:14 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/27 17:00:01 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ Intern::Intern()
 
 Intern::Intern(Intern const &i)
 {
+	(void) i;
 }
 
 Intern::~Intern()
@@ -26,19 +27,21 @@ Intern::~Intern()
 
 Intern &Intern::operator=(Intern const &i)
 {
+	(void) i;
+	return (*this);
 }
 
 Form *makeShrubberyCreationForm(std::string target)
 {
-	return (new ShrubberyCreationForm());
+	return (new ShrubberyCreationForm(target));
 }
 Form *makeRobotomyRequestForm(std::string target)
 {
-	return (new RobotomyRequestForm());
+	return (new RobotomyRequestForm(target));
 };
 Form *makePresidentialPardonForm(std::string target)
 {
-	return (new PresidentialPardonForm());
+	return (new PresidentialPardonForm(target));
 }
 
 Form *Intern::makeForm(std::string formname, std::string target)
@@ -55,4 +58,5 @@ Form *Intern::makeForm(std::string formname, std::string target)
 		}
 	}
 	std::cout << "Intern can't make unknown form" << std::endl;
+	return (0);
 }

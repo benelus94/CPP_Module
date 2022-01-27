@@ -1,4 +1,4 @@
-CC = CLANG++
+CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 LFLAGS = -L.
 INCS = -I includes
@@ -25,7 +25,7 @@ clean :
 	rm -f $(OBJS)
 
 fclean : clean
-	rm -f $(NAME)
+	rm -f $(NAME) target_shrubbery
 
 re : fclean
 	make all

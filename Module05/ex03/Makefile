@@ -1,4 +1,4 @@
-CC = CLANG++
+CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 LFLAGS = -L.
 INCS = -I includes
@@ -7,7 +7,7 @@ NAME = tests
 
 OBJS_DIR = objs/
 
-SRCS = main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp
+SRCS = main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp Intern.cpp
 OBJS = $(addprefix $(OBJS_DIR),$(SRCS:.cpp=.o))
 
 all : $(NAME) 
@@ -25,7 +25,7 @@ clean :
 	rm -f $(OBJS)
 
 fclean : clean
-	rm -f $(NAME)
+	rm -f $(NAME) Bendor_shrubbery
 
 re : fclean
 	make all

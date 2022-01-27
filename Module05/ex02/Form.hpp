@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 18:02:43 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/11/10 17:34:54 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/27 18:59:06 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,6 @@ class Form
 		virtual void	action() const;
 };
 
-std::ostream	&operator<<(std::ostream &os, Form const &form);
+std::ostream	&operator<<(std::ostream &os, const Form &form);
 
 #endif

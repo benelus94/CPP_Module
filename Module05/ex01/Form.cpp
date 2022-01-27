@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 16:58:27 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/11/10 17:39:19 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/27 18:56:06 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,16 @@ Form::Form(): name("Default"), sign(false), grade_sign(150), grade_exec(150)
 
 Form::Form(std::string name, int grade_sign, int grade_exec) : name(name), sign(false), grade_sign(grade_sign), grade_exec(grade_exec)
 {	
-	if (getGradeSign() < 1 || getGradeSign() < 1)
+	if (getGradeSign() < 1 || getGradeExec() < 1)
 		throw Form::GradeTooHighException();
-	else if (getGradeSign() > 150 || getGradeSign() > 150)
+	else if (getGradeSign() > 150 || getGradeExec() > 150)
 		throw Form::GradeTooLowException();
 }
 Form::Form(Form const &form) : name(form.name), sign(form.sign), grade_sign(form.grade_sign), grade_exec(form.grade_exec)
 {
-	if (getGradeSign() < 1 || getGradeSign() < 1)
+	if (getGradeSign() < 1 || getGradeExec() < 1)
 		throw Form::GradeTooHighException();
-	else if (getGradeSign() > 150 || getGradeSign() > 150)
+	else if (getGradeSign() > 150 || getGradeExec() > 150)
 		throw Form::GradeTooLowException();
 }
 
@@ -103,7 +103,7 @@ void		Form::beSigned(Bureaucrat const &bur)
 		throw Form::GradeTooLowException();
 }
 
-std::ostream	&operator<<(std::ostream &os, Form const &form)
+std::ostream	&operator<<(std::ostream &os, const Form &form)
 {
 	os << form.getName() << ", sign " << std::boolalpha << form.getSign();
 	os << ", grade_sign " << form.getGradeSign() << ", grade_exec " << form.getGradeExec();
