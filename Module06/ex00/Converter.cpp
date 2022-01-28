@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 17:13:56 by yongwkim          #+#    #+#             */
-/*   Updated: 2022/01/28 14:58:03 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/28 15:54:24 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,49 +112,58 @@ double		Converter::toDouble()
 
 void	Converter::printResult()
 {
+	std::cout << "char: ";
 	try
 	{
 		char c = this->toChar();
-		std::cout << "char: '" << c << "'" << std::endl;
+		std::cout << "'" << c << "'" << std::endl;
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << "char: " << e.what() << std::endl;
+		std::cerr << e.what() << std::endl;
 	}
 	
+	std::cout << "int: ";
 	try
 	{
 		int i = this->toInt();
-		std::cout << "int: " << i << std::endl;
+		std::cout << i << std::endl;
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << "int: " << e.what() << std::endl;
+		std::cerr << e.what() << std::endl;
 	}
 
+
+	std::cout << "float: ";
 	try
 	{
 		float f = this->toFloat();
-		std::cout << "float: " << f;
+		if (f == std::numeric_limits<float>::infinity())
+			std::cout << "+";
+		std::cout << f;
 		if (isint || get_digit(f) == 6 || type == TypeChar)
 			std::cout << ".0";
 		std::cout << "f" << std::endl;
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << "float: " << e.what() << std::endl;
+		std::cerr << e.what() << std::endl;
 	}
 	
+	std::cout << "double: ";
 	try
 	{
 		double d = this->toDouble();
-		std::cout << "double: " << d;
+		if (d == std::numeric_limits<float>::infinity())
+			std::cout << "+";
+		std::cout << d;
 		if (isint || type == TypeChar)
 			std::cout << ".0";
 		std::cout << std::endl;
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << "double: " << e.what() << std::endl;;
+		std::cerr << e.what() << std::endl;;
 	}
 }
