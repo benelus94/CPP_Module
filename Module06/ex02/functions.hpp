@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/31 17:00:21 by yongwkim          #+#    #+#             */
-/*   Updated: 2022/01/03 17:43:12 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/28 15:40:10 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,9 @@
 template<typename T>
 Base	*construct(void)
 {
-	return (new T());
+	return (dynamic_cast<Base*>(new T()));
 }
+
 Base *generate(void);
 
 void	identify(Base *p);

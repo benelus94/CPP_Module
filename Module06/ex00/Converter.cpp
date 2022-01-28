@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 17:13:56 by yongwkim          #+#    #+#             */
-/*   Updated: 2021/12/30 17:23:22 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/28 14:58:03 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,7 @@ float		Converter::toFloat()
 
 double		Converter::toDouble()
 {
-	if (type == TypeInvalid || dbl > std::numeric_limits<double>::infinity() || dbl < -std::numeric_limits<double>::infinity())
+	if (type == TypeInvalid)
 		throw ImpossibleException();
 	else if (type == TypeChar)
 		return (str[0]);
@@ -112,7 +112,6 @@ double		Converter::toDouble()
 
 void	Converter::printResult()
 {
-	//std::cout.precision(8);
 	try
 	{
 		char c = this->toChar();
