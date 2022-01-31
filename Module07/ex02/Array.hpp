@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 14:54:39 by yongwkim          #+#    #+#             */
-/*   Updated: 2022/01/10 16:18:10 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/01/30 16:46:09 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,22 @@ class Array
 		{
 			_size = arr.size();
 			data = new T[_size];
-			for (int i = 0; i < (int)_size; i++)
-				data[i] = arr.data[i];
+			if (arr.data)
+			{
+				for (int i = 0; i < (int)_size; i++)
+					data[i] = arr.data[i];
+			}
 		};
 
 		Array &operator=(const Array &arr)
 		{
 			_size = arr.size();
 			data = new T[_size];
-			for (int i = 0; i < (int)_size; i++)
-				data[i] = arr.data[i];
+			if (arr.data)
+			{
+				for (int i = 0; i < (int)_size; i++)
+					data[i] = arr.data[i];
+			}
 		};
 
 		T &operator[](unsigned int i)
@@ -47,7 +53,11 @@ class Array
 			return (data[i]);
 		};
 
-		~Array() {delete[] data;};
+		~Array() 
+		{
+			if (this->data)
+				delete[] data;
+		};
 
 		unsigned int	size() const {return (_size);};
 
