@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 16:50:07 by yongwkim          #+#    #+#             */
-/*   Updated: 2022/02/01 12:07:00 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/02/01 13:20:08 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,18 @@ int main()
 		std::cout << *it << std::endl;
 		++it;
 	}
-	std::stack<int> s(mstack);
+
+	MutantStack<int> s(mstack);
+	MutantStack<int>::reverse_iterator rit = s.rbegin();
+	MutantStack<int>::reverse_iterator rite = s.rend();
+	++rit;
+	--rit;
+	while (rit != rite)
+	{
+		std::cout << *rit << std::endl;
+		++rit;
+	}
+
 
 	return 0;
 }
