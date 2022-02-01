@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 16:50:07 by yongwkim          #+#    #+#             */
-/*   Updated: 2022/01/12 13:54:07 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/02/01 10:33:23 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,6 @@
 #include <deque>
 #include <list>
 #include <set>
-#include <map>
-
-template <typename T>
-void	print_container(T &t)
-{
-	typename T::iterator it;
-	std::cout << "container : [";
-	for (it = t.begin(); it != t.end(); it++)
-	{
-		std::cout << *it << ", ";
-	}
-	std::cout << "]" << std::endl;
-}
 
 int main()
 {

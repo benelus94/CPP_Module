@@ -6,7 +6,7 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 14:17:13 by yongwkim          #+#    #+#             */
-/*   Updated: 2022/01/12 18:03:52 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/02/01 11:54:00 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Span::Span(unsigned int max_size) : max_size(max_size)
 {
 }
 
-Span::Span(const Span &s) : max_size(s.max_size)
+Span::Span(const Span &s) : max_size(s.max_size), data(s.data)
 {
 }
 
@@ -27,6 +27,7 @@ Span::~Span()
 Span &Span::operator=(const Span &s)
 {
 	max_size = s.max_size;
+	data = s.data;
 	return (*this);
 }
 
@@ -34,8 +35,6 @@ std::set<int>	Span::getData()
 {
 	return (data);
 }
-
-
 
 void	Span::addNumber(int n)
 {
@@ -48,8 +47,6 @@ int		Span::shortestSpan(void)
 {
 	if (data.size() <= 1)
 		throw ContainerTooSmallException();
-
-	//std::sort(data.begin(), data.end());
 
 	std::set<int>::iterator	first = data.begin();
 	std::set<int>::iterator	next = ++data.begin();

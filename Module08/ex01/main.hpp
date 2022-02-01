@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   easyfind.hpp                                       :+:      :+:    :+:   */
+/*   main.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/10 17:06:02 by yongwkim          #+#    #+#             */
-/*   Updated: 2022/02/01 10:33:17 by yongwkim         ###   ########.fr       */
+/*   Created: 2022/02/01 10:53:35 by yongwkim          #+#    #+#             */
+/*   Updated: 2022/02/01 11:05:40 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <algorithm>
-#include <iostream>
+#ifndef MAIN_HPP
+# define MAIN_HPP
 
-template<typename T>
-typename T::iterator	easyfind(T &t, int n)
-{
-	typename T::iterator it;
-
-	return (std::find(t.begin(), t.end(), n));
-}
+#include "span.hpp"
 
 template <typename T>
 void	print_container(T &t)
@@ -32,3 +26,5 @@ void	print_container(T &t)
 	}
 	std::cout << "]" << std::endl;
 }
+
+#endif

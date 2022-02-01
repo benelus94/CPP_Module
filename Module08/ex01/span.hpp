@@ -6,12 +6,13 @@
 /*   By: yongwkim <yongwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 13:58:17 by yongwkim          #+#    #+#             */
-/*   Updated: 2022/01/14 17:07:03 by yongwkim         ###   ########.fr       */
+/*   Updated: 2022/02/01 11:53:44 by yongwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <set>
+#include <cmath>
 
 class Span
 {
@@ -27,17 +28,24 @@ class Span
 
 		std::set<int>	getData();
 		void	addNumber(int n);
+		template<typename Iterator>
+		void	addNumber(Iterator begin, Iterator end)
+		{
+			if (data.size() + std::distance(begin, end) > max_size)
+				throw ContainerFullException();
+			data.insert(begin, end);
+		};
 		int		shortestSpan(void);
 		int		longestSpan(void);
 
 		//exceptions
 
-		class ContainerFullException
+		class ContainerFullException : public std::exception
 		{
 			const char *what() const throw();
 		};
 
-		class ContainerTooSmallException
+		class ContainerTooSmallException : public std::exception
 		{
 			const char *what() const throw();
 		};
